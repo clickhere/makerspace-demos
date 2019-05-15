@@ -11,20 +11,22 @@ http.listen(3000, function(){
   console.log('listening on *:3000');
 });
 
-io.on('connection', function(socket){
-  console.log('a user connected with id ', socket.id);
 
-  socket.on('disconnect', function(){
-    console.log('user disconnected', socket.id);
-  });
 
-  socket.on('message', function(msg){
-    console.log(msg);
-  });
+board.on('ready', function() {
 
-  board.on('ready', function() {
+  var led = new five.Led(13); // Pin 13
 
-    var led = new five.Led(13); // Pin 13
+  io.on('connection', function(socket){
+    console.log('a user connected with id ', socket.id);
+
+    socket.on('disconnect', function(){
+      console.log('user disconnected', socket.id);
+    });
+
+    socket.on('message', function(msg){
+      console.log(msg);
+    });
 
     socket.on('led:on', function() {
       socket.emit('led:on');
@@ -39,5 +41,6 @@ io.on('connection', function(socket){
     });
 
   });
+
 
 });
