@@ -11,11 +11,9 @@ http.listen(3000, function(){
   console.log('listening on *:3000');
 });
 
-
-
 board.on('ready', function() {
 
-  var led = new five.Led(13); // Pin 13
+  var led = new five.Led(13);
 
   io.on('connection', function(socket){
     console.log('a user connected with id ', socket.id);
@@ -41,6 +39,5 @@ board.on('ready', function() {
     });
 
   });
-
 
 });
