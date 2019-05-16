@@ -15,10 +15,10 @@ This demo illustrates how to integrate the Arduino Uno platform, with a simple R
 - 1 X TMP36 temperature sensor
 
 ## Software Requirements
-- Arduino IDE
-- Node.js version v10.9.0
-- npm 6.2.0
-- yarn (Optional)
+- Arduino IDE [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software)
+- Node.js version v10.9.0 [https://nodejs.org/en/](https://nodejs.org/en/)
+- npm 6.2.0 [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- yarn (Optional) [https://yarnpkg.com/en/docs/install#mac-stable] (https://yarnpkg.com/en/docs/install#mac-stable)
 
 ### Firmware
 The StandardFirmataPlus firmware is used for Johnny-Five to communicate with the board.To install Firmata on your Arduino, follow these steps:
@@ -33,7 +33,24 @@ The StandardFirmataPlus firmware is used for Johnny-Five to communicate with the
 
 - Run `npm run start` or `yarn start`
 
+
+### Project Overview
+- `server.js` connects with the board, and emits messages via web sockets
+- `src/index.js` React entry point
+- `src/Appjsx` React App component, with `<LightSwitch/>` and `<Temperature/>` components
+
+
+
 ## Schematic
 ![alt text](src/assets/images/arduino_makerspace.png "LED on pin 13 (Arduino UNO)")
 
+## Resources
+- React Tutorial [https://reactjs.org/tutorial/tutorial.html](https://reactjs.org/tutorial/tutorial.html)
+- Johnny 5 Examples [http://johnny-five.io/examples/](http://johnny-five.io/examples/)
+- Arduino Programming Language Reference [https://www.arduino.cc/reference/en/] (https://www.arduino.cc/reference/en/)
+- SparkFun - Arduino, Electronics shop [https://www.sparkfun.com/](https://www.sparkfun.com/)
+
+
 Developed by: Muriel Gonzalez mgonzalez@clickherelabs.com
+
+
