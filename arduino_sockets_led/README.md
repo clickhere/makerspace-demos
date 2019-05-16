@@ -1,6 +1,6 @@
 # Arduino / Socket.io / Johnny 5 Demo
 
-This demo integrates the arduino platform via Johnny5, with a node.js express server and websockets.
+This demo integrates the arduino platform via Johnny5, with a node.js express server, websockets and React front-end. 
 
 ## Requirements
 - Node.js version v10.9.0
