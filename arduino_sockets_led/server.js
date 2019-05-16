@@ -1,9 +1,9 @@
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var five = require('johnny-five');
-var board = five.Board();
+let express = require('express');
+let app = express();
+let http = require('http').Server(app);
+let io = require('socket.io')(http);
+let five = require('johnny-five');
+let board = five.Board();
 
 app.use(express.static('public'));
 
@@ -13,7 +13,7 @@ http.listen(3000, function(){
 
 board.on('ready', function() {
 
-  var led = new five.Led(13);
+  let led = new five.Led(13);
 
   io.on('connection', function(socket){
     console.log('a user connected with id ', socket.id);

@@ -2,16 +2,36 @@
   "name": "hello_arduino",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently --kill-others-on-fail \"node server.js\" \"PORT=3001 react-scripts start\"",
+    "build": "react-scripts build",
+    "server": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Muriel Gonzalez @Click Here Labs",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "johnny-five": "^1.1.0",
-    "socket.io": "^1.7.3"
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^2.2.0"
+  },
+  "proxy": "http://localhost:3000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
