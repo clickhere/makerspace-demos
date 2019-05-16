@@ -27,11 +27,13 @@ The StandardFirmataPlus firmware is the one that is used for Johnny-Five to comm
  
 ## Software Requirements
 - Node.js version v10.9.0
+- npm 6.2.0
+- yarn (Optional)
 
 ### Installation 
 - `npm install` or `yarn install`
 
-- Run `yarn start`
+- Run `npm run start` or `yarn start`
 
 ## Schematic
 ![alt text](src/assets/images/arduino_makerspace.png "LED on pin 13 (Arduino UNO)")
