@@ -8,8 +8,8 @@ This demo integrates the arduino platform via Johnny5, with a node.js express se
 ## Installation 
 - `npm install` or `yarn install`
 
-- Run `node index.js` and open `localhost:3000` on your browser
+- Run `yarn start`
 
 ## Arduino
 Connect an LED to Pin 13
-
+![alt text](src/assets/images/led-13.png "LED on pin 13 (Arduino UNO)")
