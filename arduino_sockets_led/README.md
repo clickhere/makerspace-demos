@@ -3,7 +3,7 @@
 This demo integrates the arduino platform via Johnny5, with a node.js express server and websockets.
 
 ## Requirements
-- Node.js version 9.10.0
+- Node.js version v10.9.0
 
 ## Installation 
 - `npm install` or `yarn install`
