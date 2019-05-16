@@ -10,13 +10,11 @@ class LightSwitch extends Component {
     super(props);
     this.state = {
       lightOn: '',
+      temp: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
 
-    socket.on('connect',function(){
-      socket.emit('message', 'Hello server');
-    });
   }
 
   handleChange(event) {
@@ -24,11 +22,16 @@ class LightSwitch extends Component {
 
     if (this.state.lightOn) {
       socket.emit("led:off");
+      document.body.classList.remove('lit');
     } else {
       socket.emit("led:on");
+      document.body.classList.add('lit');
     }
   }
 
+  renderStatus() {
+    return this.state.lightOn ? "Lights are on" : "Lights are off";
+  }
 
   render() {
     return (

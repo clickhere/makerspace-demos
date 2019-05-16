@@ -15,6 +15,11 @@ board.on('ready', function() {
 
   let led = new five.Led(13);
 
+  let temp = new five.Thermometer({
+    controller: "TMP36",
+    pin: "A0"
+  });
+
   io.on('connection', function(socket){
     console.log('a user connected with id ', socket.id);
 
@@ -36,6 +41,10 @@ board.on('ready', function() {
       socket.emit('led:off');
       console.log('Broadcasting: led:off');
       led.off();
+    });
+
+    temp.on("change", function() {
+      socket.emit('temp', this.fahrenheit.toFixed(0))
     });
 
   });
