@@ -1,6 +1,6 @@
-# Arduino / Socket.io / Johnny 5 Demo
+# Arduino / Socket.io / Johnny 5 / React
 
-This demo integrates the arduino platform via Johnny5, with a node.js express server, websockets and React front-end. 
+This demo integrates the Arduino Uno platform via Johnny 5, with a simple Node.js Express server, Websockets and a React front-end. 
 
 ## Requirements
 - Node.js version v10.9.0
@@ -13,3 +13,5 @@ This demo integrates the arduino platform via Johnny5, with a node.js express se
 ## Arduino
 Connect an LED to Pin 13
 ![alt text](src/assets/images/led-13.png "LED on pin 13 (Arduino UNO)")
+
+Developed by: Muriel Gonzalez mgonzalez@clickherelabs.com
